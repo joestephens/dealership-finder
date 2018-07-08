@@ -19,6 +19,10 @@ const Input = styled.input`
   &:focus {
     border-color: ${({ theme }) => theme.colors.outlineFocus};
   }
+
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.inputPlaceholder};
+  }
 `
 
 /** @component */
