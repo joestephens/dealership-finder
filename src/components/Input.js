@@ -13,6 +13,7 @@ const Input = styled.input`
   font-family: inherit;
   padding: 0 1.5rem;
   box-sizing: border-box;
+  border-radius: 0.2rem;
   transition: border-color 0.2s ease-in-out;
 
   &:focus {
