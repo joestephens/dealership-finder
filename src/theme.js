@@ -5,6 +5,7 @@ const theme = {
     buttonDisabled: '#f4f4f4',
     buttonDisabledText: '#b6b8ba',
     buttonPrimary: '#d01427',
+    textGrey: '#8c8d8e',
     inputPlaceholder: '#b7b7b7',
     outline: '#e0e0e0',
     outlineFocus: '#000',
