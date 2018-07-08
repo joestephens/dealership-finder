@@ -11,6 +11,7 @@ const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.buttonActive};
   color: ${({ theme }) => theme.colors.buttonActiveText};
   width: 100%;
+  padding: 0 1.5rem;
 
   ${({ disabled, theme }) => disabled ? `
     background-color: ${theme.colors.buttonDisabled};
@@ -22,7 +23,7 @@ const Button = styled.button`
   ` : null}
 
   ${({ large }) => large ? `
-    height: 6.4rem;
+    height: 5.2rem;
   ` : null}
 `
 
