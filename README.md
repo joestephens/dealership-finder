@@ -1,8 +1,10 @@
 # Dealership Finder
 
+You can view on Heroku [here](https://dealership-finder.herokuapp.com/). **Note:** The "Search" button doesn't work on the production environment - the environment variable containing the Google API key isn't configured correctly / compiling into the source. It does work correctly when using locally.
+
 ## Installation
 
-You'll need to rename `.env.example` to `.env`. The application uses the Google Geocoding API to determine lat/lng coordinates from a given address, so you'll need to register for the Geocoding API and copy your key into the `.env` file.
+You'll need to rename `.env.example` to `.env`. The application uses the Google Geocoding API to determine lat/lng coordinates from a given address, so you'll need to register for the Geocoding API and copy your key into the `.env` file. This key should be URL restricted, as it will show in the compiled source.
 
 ```js
 git clone git@github.com:joestephens/dealership-finder.git
@@ -27,8 +29,11 @@ Once I had coded some basic components and the Location Picker, I brought these 
 
 All notifications to the user are handled by `react-toastify` - this was a time saving decision allowing me to focus on more important app functionality.
 
+Lat/lng is logged out to the console to demonstrate capability, as the mock dealership data presented doesn't use this in any way.
+
 ## To Do
 
+* [ ] Fix environment variable on Heroku
 * [ ] "CONTINUE TO NEXT STEP" button and behaviour
 * [ ] Tests for existing components
 * [ ] Add a map to `StepOne`
@@ -36,3 +41,4 @@ All notifications to the user are handled by `react-toastify` - this was a time 
 * [ ] SelectedDealership component
 * [ ] CheckboxGroup component
 * [ ] StepTwo form and Axios post request
+* [ ] Media queries for desktop view
