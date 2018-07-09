@@ -25,6 +25,8 @@ class ProvideDealerships extends Component {
   componentWillReceiveProps ({ latLng }) {
     if (!latLng) return
 
+    console.log('finding dealerships using lat lng', latLng)
+
     axios.get('/api/dealerships.json')
       .then(({ data: dealerships }) => this.setState({ dealerships }))
       .catch(err => console.error(err))
