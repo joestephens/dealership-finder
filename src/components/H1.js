@@ -6,4 +6,5 @@ const H1 = styled.h1`
   font-weight: bold;
 `
 
+/** @component */
 export default H1

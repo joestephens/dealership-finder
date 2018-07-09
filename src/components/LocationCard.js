@@ -55,8 +55,18 @@ const ResultNumber = styled.div`
   ` : null}
 `
 
-const LocationCard = ({ number, name, address, selected }) => (
-  <LocationCardWrapper selected={selected}>
+const LocationCard = ({ 
+  _id,
+  number, 
+  name, 
+  address, 
+  selected, 
+  onChooseDealership
+}) => (
+  <LocationCardWrapper 
+    selected={selected} 
+    onClick={() => onChooseDealership(_id)}
+  >
     <ResultNumber selected={selected}>
       {number}
     </ResultNumber>
@@ -79,6 +89,7 @@ LocationCard.defaultProps = {
 }
 
 LocationCard.propTypes = {
+  _id: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   address: PropTypes.shape({
@@ -86,7 +97,8 @@ LocationCard.propTypes = {
     line2: PropTypes.string.isRequired,
     postcode: PropTypes.string.isRequired
   }).isRequired,
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
+  onChooseDealership: PropTypes.func.isRequired
 }
 
 export default LocationCard
